@@ -1,0 +1,126 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexCenter;
+  position: relative;
+  color: inherit;
+}
+
+.dropdown {
+  &_size {
+    &_small {
+      @include dropdownContentMediumMedium;
+    }
+    &_medium {
+      @include dropdownContentMediumMedium;
+    }
+  }
+
+  &_color {
+    &_white {
+      .arrow {
+        stroke: $white;
+        path {
+          stroke: $white;
+        }
+      }
+    }
+    &_darkBlue {
+      stroke: $blueFirst;
+      path {
+        stroke: $blueFirst;
+      }
+    }
+  }
+}
+
+.titleContainers {
+  display: flex;
+  gap: 40px;
+}
+
+.titleContainer {
+  @include flexCenter;
+  width: max-content;
+  gap: 6px;
+}
+
+.title {
+  @include dropdownContentMediumMedium;
+  cursor: pointer;
+}
+
+.arrow {
+  padding-left: 3px;
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+}
+
+.titleContainerActive {
+  > .arrow {
+    rotate: 180deg;
+  }
+}
+
+.transparentContainer {
+  padding-top: 10px;
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 30px;
+  left: 0;
+}
+
+.transparentContainerActive {
+  display: block;
+}
+
+.dropDownListsContainers {
+  padding: 15px 0;
+  box-shadow: $shadow;
+  background: $white;
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dropDownListContainer {
+  @include resetListStyles;
+  @include cardContentDescriptionRegular;
+  box-sizing: border-box;
+  max-width: 250px;
+  width: max-content;
+  color: inherit;
+}
+
+.dropDownListItemTitle {
+  padding: 13px 27px 11px 27px;
+  font-weight: 600;
+  border-bottom: 2px solid $greyFirst;
+  color: $blueFirst;
+}
+
+.dropDownListItem {
+  @include flexCenter;
+  box-sizing: border-box;
+  max-width: 100%;
+  gap: 12px;
+  margin: 0 15px;
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid $greyFirst;
+
+  &:hover {
+    background: $greyFirst;
+    border-radius: 5px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.listItemContent {
+  @include dropdownContentSmallMedium;
+  color: $blueFirst;
+}

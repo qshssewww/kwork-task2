@@ -1,0 +1,98 @@
+@import "@/styles/settings/settings.scss";
+
+.main {
+  padding: 70px 0 77px 20px;
+  background-color: $greyBg;
+}
+
+.container {
+  max-width: 1564px;
+  margin: 0 auto;
+}
+
+.text {
+  @include cardContentDescriptionRegular;
+  padding-right: 20px;
+  margin: 14px auto 0;
+  text-align: center;
+  max-width: 412px;
+  color: $neutral08;
+}
+
+.tourContainer {
+  @include resetListStyles;
+  padding-right: 20px;
+  margin: 40px auto 0;
+  display: flex;
+  gap: 45px;
+  max-width: 1560px;
+  width: fit-content;
+}
+
+.tourText {
+  @include resetButtonStyles;
+  @include cardContentRegular;
+  background: $transparent;
+  display: block;
+  padding-bottom: 16px;
+  color: $neutral08;
+  border-bottom: 2px solid $transparent;
+}
+
+.tourText:hover {
+  color: $blueFirst;
+  border-color: $blueFirst;
+}
+
+.tourTextActive {
+  color: $blueFirst;
+  border-color: $blueFirst;
+}
+
+.cardsContainer {
+  @include resetListStyles;
+  max-width: 1564px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 368px));
+  margin: 49px auto 0;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+}
+
+.cardExtraClass {
+  max-width: 288px;
+}
+
+@media screen and (max-width: 800px) {
+  .cardExtraClass {
+    max-width: 180px;
+  }
+  .cardsContainer {
+    display: block;
+  }
+  .text {
+    @include cardContentRegularMobile;
+    margin-bottom: 23px;
+    text-align: start;
+    width: 280px;
+  }
+  .tourContainer {
+    margin: 23px 0 30px;
+    gap: 31px;
+    overflow-x: scroll;
+    max-width: 100%;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  .tourContainer::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .card {
+    max-height: fit-content;
+  }
+}

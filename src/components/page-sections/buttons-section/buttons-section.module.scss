@@ -1,0 +1,23 @@
+@import "@/styles/settings/settings.scss";
+
+.section {
+  max-width: 1560px;
+}
+
+.link {
+  @include resetLinkStyles;
+}
+
+.buttonsList {
+  @include resetListStyles;
+  @include flexCenter;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .button {
+    @include attractionsLinksRegular;
+    padding: 14px;
+  }
+}

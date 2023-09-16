@@ -1,0 +1,196 @@
+@import "@/styles/settings/settings.scss";
+
+.main {
+  background-color: $greyBg;
+}
+
+.contentContainer {
+  padding: 70px 0 70px 20px;
+  max-width: 1560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.buttonContainer {
+  margin: 60px auto 0;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  padding: 14px 37.5px !important;
+  justify-content: center;
+}
+
+.card {
+  max-width: 288px;
+}
+
+.tourModal{
+  height: 100%;
+  // padding: 10px;
+}
+
+.titleModal{
+  font-size: 25px;
+  font-weight: bold;
+  color: $blueSecond;
+  text-align: center;
+}
+.modalBody{
+  height: 100%;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.part2{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color: blue;
+  margin: 0;
+  // padding: 5px;
+}
+
+.formSrcoll{
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
+  padding-right: 5px;
+  
+}
+.formSrcoll::-webkit-scrollbar {
+  width: 7px;
+}
+
+.formSrcoll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: $greySecond;
+}
+
+.formSrcoll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px $greyThird;
+}
+
+.desc{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  color: $greyThird;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  line-height: 1.2rem;
+  text-align: center;
+}
+.descSosial{
+  font-size: 15px;
+  color: $greyThird;
+  margin-bottom: 20px !important;
+  line-height: 1.2rem;
+}
+
+.inputModal{
+    font-size: 18px;
+    width: 100% !important;
+    height: 42px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .buttonModal {
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  padding: 10px 32.5px !important;
+  justify-content: center;
+}
+
+// .step2{
+//   height: 210px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+// }
+
+.contacts{
+  width: 100%;
+  display: flex;
+  // justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.contactItem{
+  width: 75px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid $greySecond;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: $greySecond;
+  transition: 0.2s all;
+}
+.contactItem:hover{
+  background-color: $blueFirst;
+  transition: 0.2s all;
+
+}
+
+.active{
+  background-color: $blueFirst;
+  color: white;
+}
+
+.result{
+  height: 40px;
+  // background-color: red;
+}
+
+
+@media screen and (max-width: 800px) {
+  .card {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .part2{
+    height: 100%;
+  }
+  .formSrcoll{
+    height: 24rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .slider {
+    align-items: baseline;
+  }
+  .buttonContainer {
+    margin: 32px auto 0;
+    width: 100%;
+  }
+}

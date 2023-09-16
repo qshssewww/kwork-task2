@@ -1,0 +1,16 @@
+@import "@/styles/settings/settings.scss";
+
+.peopleContainer {
+  @include flexColumn;
+  gap: 20px;
+
+  .countersContainer {
+    @include flexColumn;
+    gap: 8px;
+  }
+
+  .inputsContainer {
+    @include flexColumn;
+    gap: 20px;
+  }
+}

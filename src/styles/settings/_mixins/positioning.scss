@@ -1,0 +1,31 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: initial) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
+
+@mixin setSectionMargins {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+@mixin setSectionContentPosition {
+  margin: 0 auto;
+  max-width: 1560px;
+  width: 100%;
+}

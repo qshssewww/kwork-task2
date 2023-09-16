@@ -1,0 +1,40 @@
+.contentContainer {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-height: 30vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contentContainer {
+    padding: 0 20px 20px;
+    max-height: calc(100vh - 205.5px);
+  }
+
+  .returnDateContent {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .calendarContent {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .timeContent {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .peopleContent {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  .receiptContent {
+    padding-top: 29px;
+  }
+}

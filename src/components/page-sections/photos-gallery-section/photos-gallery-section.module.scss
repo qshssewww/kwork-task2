@@ -1,0 +1,47 @@
+@import "@/styles/settings/settings.scss";
+
+.photosList {
+  @include resetListStyles;
+  display: grid;
+  grid-template-columns: minmax(500px, 1fr) minmax(300px, 447px);
+  grid-template-areas: "firstPhoto secondPhoto" "firstPhoto thirdPhoto";
+  grid-template-rows: repeat(2, minmax(150px, 286px));
+  gap: 30px;
+}
+
+.photosItem {
+  @include resetListStyles;
+  height: auto;
+
+  &:first-child {
+    grid-area: firstPhoto;
+  }
+  &:nth-child(2) {
+    grid-area: secondPhoto;
+  }
+  &:nth-child(3) {
+    grid-area: thirdPhoto;
+    position: relative;
+  }
+}
+
+.photo {
+  width: 100%;
+  height: -webkit-fill-available;
+  min-height: 100%;
+  object-fit: cover;
+  max-height: min-content;
+  border-radius: 5px;
+}
+
+.button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+  .photosList {
+    grid-template-columns: minmax(500px, 1fr) minmax(300px, 427px);
+  }
+}

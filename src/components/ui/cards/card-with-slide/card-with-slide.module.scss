@@ -1,0 +1,73 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexCenter;
+  justify-items: center;
+  gap: 71px;
+  display: grid;
+  grid-template-columns: minmax(200px, 606px) minmax(200px, 606px);
+}
+
+.image {
+  object-fit: cover;
+  max-width: 606px;
+  border-radius: 5px;
+  justify-self: center;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.container li {
+  justify-items: center;
+  display: flex;
+}
+
+.contentContainer {
+  @include flexColumn;
+  max-width: 606px;
+  gap: 20px;
+}
+
+.title {
+  @include subtitle;
+}
+
+.text {
+  @include cardContentRegular;
+  color: $neutral08;
+}
+
+.link {
+  @include cardContentSemiBoldMobile;
+  color: $black;
+  text-decoration-line: underline;
+  font-style: bold;
+}
+
+@media screen and (max-width: 1645px) {
+  .container {
+    gap: 30px;
+  }
+  .image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1101px) {
+  .container {
+    grid-template-columns: minmax(200px, 606px);
+    gap: 24px;
+  }
+  .contentContainer {
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .text {
+    @include cardContentRegularMobile;
+  }
+  .title {
+    @include subtitleMobile;
+  }
+}

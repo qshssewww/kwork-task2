@@ -1,0 +1,34 @@
+.section {
+  max-width: 605px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: var(--montserrat);
+}
+
+.container {
+  padding-top: 223px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 60px;
+  margin: 0;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}

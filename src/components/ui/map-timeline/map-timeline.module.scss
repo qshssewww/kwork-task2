@@ -1,0 +1,97 @@
+@import "@/styles/settings/settings.scss";
+
+.timelineList {
+  @include resetListStyles;
+}
+
+.timelineItem {
+  @include resetListStyles;
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding-bottom: 40px;
+
+  .marker {
+    flex-shrink: 0;
+  }
+
+  &:first-child {
+    &:before {
+      content: "";
+      width: 8px;
+      position: absolute;
+      top: 19.5px;
+      left: 16px;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(180deg, $blueFirst 3.52%, $mainBlue 80.51%);
+    }
+  }
+
+  &:not(:last-child, :first-child) {
+    &:before {
+      content: "";
+      width: 8px;
+      position: absolute;
+      top: 19.5px;
+      left: 16px;
+      height: 100%;
+      z-index: -1;
+      background: $mainBlue;
+    }
+  }
+
+  &:nth-last-child(2) {
+    &:before {
+      content: "";
+      width: 8px;
+      position: absolute;
+      top: 19.5px;
+      left: 16px;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(180deg, $mainBlue 43.52%, $blueFirst 90.51%);
+    }
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.descriptionList {
+  @include resetListStyles;
+  @include flexColumn;
+  gap: 40px;
+}
+
+.descriptionItem {
+  @include flexColumn;
+  max-width: 400px;
+  gap: 8px;
+}
+
+.descriptionItemTitle {
+  @include descriptionContentSemiBold;
+  color: $blueFirst;
+}
+.descriptionItemContent {
+  margin: 0;
+  @include font-source(400, 20px, 140%, var(--montserrat));
+  color: $blueFirst;
+}
+
+@media screen and (max-width: 900px) {
+  .descriptionItem {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .descriptionItemTitle {
+    @include font-source(600, 16px, 140%, var(--montserrat));
+    padding-top: 8px;
+  }
+  .descriptionItemContent {
+    @include font-source(400, 14px, 140%, var(--montserrat));
+  }
+}

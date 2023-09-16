@@ -1,0 +1,100 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  // background-color: red;
+}
+
+
+.buttonLeft {
+  left: -60px;
+}
+
+.buttonRight {
+  right: -60px;
+}
+
+.arrowButton {
+  @include flexCenter;
+  justify-content: center;
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  border: 1px solid $black;
+  border-radius: 100%;
+
+  > .arrowImg {
+    width: 16px;
+    height: 16px;
+  }
+
+  & svg path {
+    fill: $transparent;
+  }
+
+  &:hover {
+    background: $buttonHover;
+    border-color: $buttonHover;
+  }
+
+  &:hover svg path {
+    stroke: $white;
+  }
+}
+
+.pagination {
+  bottom: calc(-30px - 17px);
+  z-index: 0;
+
+  & li button {
+    background: $greySecond;
+  }
+
+  & li button[aria-selected="true"] {
+    background: $blueFirst !important;
+    transform: none;
+  }
+}
+
+.link {
+  @include resetLinkStyles;
+}
+
+@media screen and (max-width: 1800px) {
+  .buttons {
+    position: absolute;
+    top: -65px;
+    right: 89px;
+  }
+  .buttonLeft {
+    left: -40px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .buttons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .splideWhiteTrack ul li {
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .splideTrack ul {
+    margin-right: 0 !important;
+  }
+  .splideTrack ul li {
+    margin-right: 15px !important;
+  }
+}
+

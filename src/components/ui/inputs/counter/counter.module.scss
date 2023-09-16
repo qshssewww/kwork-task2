@@ -1,0 +1,38 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexCenter;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 14px;
+  border: 1px solid $blueFirst;
+  border-radius: 5px;
+
+  .title {
+    @include cardContentSemiBoldMobile;
+    color: $blueFirst;
+  }
+
+  .counterContainer {
+    @include flexCenter;
+    gap: 10px;
+
+    .button {
+      @include resetButtonStyles;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+      line-height: 15px;
+      color: $white;
+      background: $blueFirst;
+      border-radius: 5px;
+    }
+
+    .counterState {
+      @include cardContentSemiBoldMobile;
+      color: $blueFirst;
+      width: 25px;
+      text-align: center;
+    }
+  }
+}

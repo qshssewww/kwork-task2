@@ -1,0 +1,12 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexColumn;
+  gap: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,77 @@
+@import "@/styles/settings/settings.scss";
+
+.inputContainer {
+  padding: 8px 8px 8px 17px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 8px;
+  align-items: center;
+  max-width: 455px;
+  background: $white;
+  border: 1px solid $searchBorderGrey;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+.input {
+  @include inputPlaceholder;
+  max-width: 385px;
+  border: 0;
+  outline: none;
+}
+
+.input::placeholder {
+  @include inputPlaceholder;
+}
+
+.searchButton {
+  @include resetButtonStyles;
+  padding: 0;
+  background-color: $blueFirst;
+  border-radius: 5px;
+  width: 44px;
+  height: 44px;
+}
+
+.searchButton:hover {
+  background: $buttonHover;
+}
+
+@media screen and (max-width: 535px) {
+  .iconImg {
+    width: 13px;
+    height: 13px;
+  }
+  .input {
+    @include inputPlaceholderMobile;
+  }
+
+  .input::placeholder {
+    @include inputPlaceholderMobile;
+  }
+  .searchButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .inputContainer {
+    margin: 0 auto;
+    max-width: 280px;
+    width: 100%;
+  }
+  .input {
+    @include inputPlaceholderMobile;
+  }
+
+  .input::placeholder {
+    @include inputPlaceholderMobile;
+  }
+  .searchButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+

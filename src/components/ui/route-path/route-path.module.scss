@@ -1,0 +1,94 @@
+@import "@/styles/settings/settings.scss";
+
+.list {
+  @include resetListStyles;
+  @include flexCenter;
+  gap: 8px;
+  width: fit-content;
+}
+
+.list {
+  &_colorTheme {
+    &_white {
+      color: $white;
+
+      .arrow {
+        & path {
+          stroke: $white;
+        }
+      }
+    }
+    &_grey {
+      color: $greyThird;
+
+      .arrow {
+        & path {
+          stroke: $greyThird;
+        }
+      }
+    }
+    &_dark {
+      color: $blueFirst;
+
+      .arrow {
+        & path {
+          stroke: $blueFirst;
+        }
+      }
+    }
+  }
+  &_position {
+    &_left {
+      margin: 0;
+    }
+    &_center {
+      margin: 0 auto;
+    }
+  }
+}
+
+.item {
+  @include flexCenter;
+  gap: 8px;
+}
+
+.itemName {
+  @include cardContentMedium;
+  color: inherit;
+}
+
+.link {
+  @include resetLinkStyles;
+  @include flexCenter;
+  display: block;
+  justify-content: center;
+  gap: 8px;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  & path {
+    stroke: inherit;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .list,
+  .link {
+    gap: 5px;
+  }
+  .itemName {
+    @include routeMobileSizeMedium;
+  }
+  .arrow {
+    width: 11px;
+    height: 11px;
+  }
+}

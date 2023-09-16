@@ -1,0 +1,22 @@
+@import "@/styles/settings/settings.scss";
+
+.buttonLeft {
+  left: -72px;
+}
+
+.buttonRight {
+  right: -72px;
+}
+
+@media screen and (max-width: 800px) {
+  .buttonRight {
+    right: 25px;
+    bottom: -78px;
+    top: auto;
+  }
+  .buttonLeft {
+    left: 25px;
+    bottom: -78px;
+    top: auto;
+  }
+}

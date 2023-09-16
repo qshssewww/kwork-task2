@@ -1,0 +1,28 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.pagination {
+  padding-top: 30px;
+  bottom: calc(-30px - 17px);
+  z-index: 0;
+}
+
+.pagination li button {
+  background: $greySecond;
+}
+
+.pagination li button[aria-selected="true"] {
+  background: $blueFirst !important;
+  transform: none;
+}
+
+@media screen and (max-width: 800px) {
+  .pagination {
+    padding-top: 30px;
+    bottom: calc(-10px - 17px);
+  }
+}

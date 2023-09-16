@@ -1,0 +1,73 @@
+@import "@/styles/settings/settings.scss";
+.container {
+    background-color: #2222220D;
+}
+
+.cardsContainer {
+    max-width: 1524px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 55px;
+    padding-bottom: 77px;
+}
+.text {
+    margin: 0;
+    padding: 0;
+    max-width: 924px;
+    font-family: var(--montserrat);
+    color: var(--neutral-08, #5E5E5E);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.title {
+    font-family: var(--montserrat);
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cardListItem {
+    @include resetListStyles
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .cardsContainer {
+        margin-top: 15px;
+        margin-left: 0;
+        padding-left: 0;
+        gap: 10px;
+    }
+    .text {
+        text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    }
+    .title {
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .section {
+        display: block;
+        padding-left: 20px;
+    }
+}

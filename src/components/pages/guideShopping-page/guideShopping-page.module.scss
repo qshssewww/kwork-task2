@@ -1,0 +1,171 @@
+@import "@/styles/settings/settings.scss";
+.title {
+    margin: 0;
+    padding: 0;
+    padding-top: 223px;
+    color: #1E293B;
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    }
+
+.bread {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+    color: #1E293B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    a {
+      text-decoration: none;
+      color: #1E293B;
+    }
+}
+
+
+
+.page {
+    background: rgba(34, 34, 34, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    @include resetButtonStyles;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background: #1E293B;
+    margin-bottom: 80px;
+}
+
+.buttonText {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 14px 29px;
+}
+
+.places {
+    background:#FFF;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.linkBread {
+  text-decoration: none;
+  color: #1e293b;
+}
+
+.placesTitle {
+    margin: 0;
+    padding: 0;
+    padding-top: 77px;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.slider {
+  padding-top: 45px;
+    padding-bottom: 77px;
+}
+
+.cardContainer {
+  margin: 0;
+  padding: 0;
+    max-width: 1562px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 77px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cardsContainer {
+    @include resetListStyles;
+    margin: 0;
+    padding: 0;
+    max-width: 1562px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 368px));
+    margin: 49px auto 0;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+    img {
+        max-height: 246px;
+      }
+  }
+  
+  .card {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .cardExtraClass {
+    max-width: 288px;
+    text-align: left;
+  }
+@media screen and (max-width: 632px) {
+    .title {
+      margin-top: 100px;
+      padding-top: 15px;
+      font-size: 20px;
+    }
+    .bread {
+      font-size: 12px;
+  
+    }
+    .placesTitle {
+      text-align: left;
+      padding-top: 30px;
+      padding-left: 19px;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .slider {
+      padding-top: 20px;
+      padding-left: 21px;
+      padding-bottom: 31px;
+  }
+    .cardExtraClass {
+      max-width: 180px;
+    }
+    .cardsContainer {
+      display: block;
+    }
+    .cardContainer {
+      padding-left: 20px;
+      margin-top: 30px;
+    }
+    .text {
+      @include cardContentRegularMobile;
+      margin-bottom: 23px;
+      text-align: start;
+      width: 280px;
+    }
+  
+    .card {
+      max-height: fit-content;
+    }
+  }

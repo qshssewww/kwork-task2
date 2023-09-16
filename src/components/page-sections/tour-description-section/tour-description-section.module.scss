@@ -1,0 +1,192 @@
+@import "@/styles/settings/settings.scss";
+
+.section {
+  @include flexColumn;
+  margin-right: 0;
+  gap: 30px;
+}
+
+.title {
+  padding-bottom: 0;
+}
+
+.tourDescription {
+  @include flexColumn;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 30px;
+  border-top: 2px solid $greyFirst;
+  border-bottom: 2px solid $greyFirst;
+}
+
+.descriptionTitle {
+  @include descriptionTitle;
+  max-width: 447px;
+  width: 100%;
+}
+
+.descriptionText {
+  @include descriptionContentNormal;
+  max-width: 1083px;
+  color: $neutral08;
+  &_height {
+    &_overflow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+.showMoreButton {
+  @include resetButtonStyles;
+  @include descriptionContentSemiBold;
+  display: inline;
+}
+
+.span {
+  &_color {
+    &_green {
+      color: $mainGreen;
+    }
+    &_orange {
+      color: $mainOrange;
+    }
+    &_red {
+      color: $mainRed;
+    }
+    &_black {
+      color: $black;
+    }
+  }
+
+  &_type {
+    &_bold {
+      font-weight: 600;
+    }
+  }
+}
+
+.buttonsContainer {
+  @include flexCenter;
+  flex-wrap: wrap;
+  font-size: 20px;
+  gap: 14px;
+}
+
+.tourCharacteristics {
+  display: flex;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid $greyFirst;
+}
+
+.tourCharacteristicsList {
+  @include resetListStyles;
+  @include flexColumn;
+  gap: 10px;
+}
+
+.tourCharacteristicsItem {
+  @include resetListStyles;
+  display: flex;
+  gap: 20px;
+}
+
+.tourCharacteristicsText {
+  @include descriptionContentNormal;
+  color: $black;
+  max-width: 554px;
+}
+
+.label {
+  @include cardContentRegular;
+  cursor: default;
+  padding: 12px 18px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.tourCharacteristicsImage {
+  margin-top: 4px;
+}
+
+.locationContainer {
+  @include flexColumn;
+  gap: 30px;
+}
+
+.mapContainer {
+  display: flex;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .section {
+    gap: 20px;
+  }
+  .descriptionTitle {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mapContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tourDescription {
+    padding-top: 10px;
+    padding-bottom: 0;
+    gap: 20px;
+    border: none;
+  }
+  .descriptionTitle {
+    @include cardContentSemiBold;
+    color: $black;
+  }
+  .descriptionText {
+    @include font-source(400, 14px, 140%, var(--montserrat));
+    &_height {
+      &_overflow {
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  .showMoreButton {
+    @include font-source(600, 14px, 140%, var(--montserrat));
+  }
+  .label {
+    @include cardContentRegularMobile;
+    padding: 4px 8px;
+    gap: 5px;
+  }
+
+  .tourCharacteristics {
+    @include descriptionTitle;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 12px;
+    border: none;
+  }
+
+  .tourCharacteristicsItem {
+    gap: 8px;
+  }
+
+  .tourCharacteristicsImage {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tourCharacteristicsText {
+    @include font-source(400, 15px, 150%, var(--montserrat));
+  }
+}

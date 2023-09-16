@@ -1,0 +1,42 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include resetButtonStyles;
+  @include flexCenter;
+  width: 100%;
+  gap: 10px;
+  height: 48px;
+  justify-content: space-between;
+  padding: 9px 14px;
+  border: 1px solid $blueFirst;
+  color: $blueFirst;
+  border-radius: 5px;
+
+  &_status {
+    &_active {
+      background: $blueFirst;
+      color: $white;
+
+      & svg path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.title {
+  @include cardContentSemiBoldMobile;
+  color: inherit;
+}
+
+.additionalData {
+  @include cardContentMediumMobile;
+  color: inherit;
+}
+
+@media screen and (max-width) {
+  .container {
+    height: 40px;
+    padding: 9px 14px;
+  }
+}

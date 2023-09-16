@@ -1,0 +1,57 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include resetListStyles;
+  max-width: 100%;
+  border-radius: 5px;
+  background: $white;
+  padding: 12px 12px 0;
+  cursor: pointer;
+}
+
+.link {
+  @include resetLinkStyles;
+}
+
+.titleContainer {
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  @include cardContentDescriptionMedium;
+}
+
+.arrowDown {
+  width: 16px;
+  height: 16px;
+}
+
+.arrowDown path {
+  stroke: $black;
+}
+
+.arrowUp {
+  rotate: 180deg;
+}
+
+.dropContainer {
+}
+
+.dropContent {
+  @include resetLinkStyles;
+  @include dropdownContentSmallRegular;
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  color: $blueFirst;
+  border-top: 1px solid $greyFirst;
+  box-sizing: border-box;
+}
+
+.no_data{
+  font-size: 13px;
+  text-align: center;
+}

@@ -1,0 +1,198 @@
+@import "@/styles/settings/settings.scss";
+.title {
+  margin: 0;
+  padding: 0;
+  margin-top: 173px;
+  color: #1e293b;
+  text-align: center;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.bread {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+  color: #1e293b;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 80px;
+}
+
+.container {
+  background-color: #2222220d;
+}
+
+.containerMain {
+  max-width: 1564px;
+  margin: 0 auto;
+}
+
+.tourContainer {
+  @include resetListStyles;
+  padding-right: 20px;
+  margin: 0 auto 0;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  max-width: 1560px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1e293b;
+}
+
+.tourContainers {
+  @include resetListStyles;
+  padding-right: 20px;
+  margin: 40px auto 0;
+  padding-top: 77px;
+  display: flex;
+  gap: 45px;
+  max-width: 1560px;
+  width: fit-content;
+}
+
+.tourText {
+  @include resetButtonStyles;
+  font-family: var(--montserrat);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: $transparent;
+  display: block;
+  padding-bottom: 16px;
+  color: #5E5E5E;
+  margin-bottom: 0;
+  border-bottom: 2px solid $transparent;
+}
+
+.tourText:hover {
+  color: $blueFirst;
+  border-color: $blueFirst;
+}
+
+.tourTextActive {
+  font-family: var(--montserrat);
+  color: $blueFirst;
+  border-color: $blueFirst;
+  margin-bottom: 0;
+}
+
+.places {
+  background: white;
+  text-align: center;
+  padding-bottom: 77px;
+}
+
+.placesTitle {
+  margin: 0;
+  padding: 0;
+  padding-top: 77px;
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.cardsContainer {
+  @include resetListStyles;
+  max-width: 1562px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 368px));
+  margin: 49px auto 0;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+  img {
+    max-height: 246px;
+  }
+}
+
+.sliderFirst {
+  padding-bottom: 70px;
+}
+
+.card {
+  width: 100%;
+  text-align: left;
+}
+
+.cardExtraClass {
+  max-width: 288px;
+  text-align: left;
+}
+.slider {
+  padding-top: 45px;
+    padding-bottom: 77px;
+}
+
+.sliderFirst {
+  padding-left: 20px;
+}
+
+
+@media screen and (max-width: 632px) {
+  .title {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .bread {
+    font-size: 12px;
+
+  }
+  .placesTitle {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .placesTitle {
+    padding-top: 30px;
+    text-align: left;
+    padding-left: 21px;
+  }
+  .tourContainer { 
+    margin-top: 0;
+  }
+
+  .slider {
+    padding-top: 20px;
+    padding-left: 21px;
+    padding-bottom: 31px;
+}
+  .bread { 
+    margin-bottom: 27px;
+  }
+
+  .cardExtraClass {
+    max-width: 180px;
+  }
+  .cardsContainer {
+    display: block;
+  }
+  .text {
+    @include cardContentRegularMobile;
+    margin-bottom: 23px;
+    text-align: start;
+    width: 280px;
+  }
+
+  .card {
+    max-height: fit-content;
+  }
+  .places { 
+    padding-bottom: 50px;
+  }
+}

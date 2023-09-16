@@ -1,0 +1,43 @@
+@import "@/styles/settings/settings.scss";
+
+.title,
+.caption {
+  text-align: center;
+}
+
+.title {
+  @include popupTitle;
+  padding-top: 40px;
+  padding-bottom: 12px;
+  color: $black;
+}
+
+.caption {
+  @include cardContentRegular;
+  padding-bottom: 60px;
+  color: $neutral08;
+}
+
+.checkmarkImage {
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    margin: auto;
+  }
+  .title {
+    @include subtitleMobile;
+    padding-top: 44px;
+    padding-bottom: 8px;
+  }
+  .caption {
+    @include cardContentRegularMobile;
+    padding-bottom: 40px;
+  }
+}

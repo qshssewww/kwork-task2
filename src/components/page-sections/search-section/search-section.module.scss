@@ -1,0 +1,214 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 450px;
+  max-height: 1000px;
+  padding: 127px 20px 20px;
+  box-sizing: border-box;
+}
+
+.container_size_fixed {
+  max-height: 464px;
+}
+
+.inputContainer {
+  @include flexColumn;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 435px;
+  gap: 54px;
+  position: relative;
+}
+
+.title {
+  @include title;
+  text-align: center;
+  max-width: 600px;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchDropDown {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  min-width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: auto;
+  right: 0;
+  display: none;
+  z-index: 2;
+}
+
+.searchDropDownActive {
+  display: block;
+}
+
+.searchDropDownList {
+  @include resetListStyles;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 23px;
+  padding-right: 23px;
+  background: $white;
+  border-radius: 5px;
+  border: 1px solid $searchBorderGrey;
+  box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.1);
+  max-height: 202px;
+  overflow-y: scroll;
+}
+
+.searchDropDownItem {
+  @include inputPlaceholder;
+  padding-top: 15px;
+  padding-left: 6px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $greyFirst;
+
+  &:hover {
+    background: $greyFirst;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  &:last-child {
+    border-color: $transparent;
+  }
+}
+
+.span_type_bold {
+  font-weight: 700;
+  color: $black;
+}
+.no_data{
+  text-align: center;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    background: url(../../../images/photos/header-bg-mobile.png) no-repeat;
+    background-size: cover;
+    max-height: 700px;
+    min-height: 250px;
+  }
+
+  .container_size_fixed {
+    max-height: 300px;
+    padding-top: 25px;
+    padding-bottom: 56px;
+    display: flex;
+    align-items: end;
+
+    .searchContainer {
+      width: inherit;
+    }
+
+    .title {
+      @include cardContentSemiBold;
+      width: fit-content;
+      color: $white;
+    }
+
+    .inputContainer {
+      justify-items: center;
+      gap: 7px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .searchContainer {
+      margin-top: 25px;
+    }
+
+    .input {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .routeList {
+      align-items: center;
+      height: fit-content;
+    }
+
+    .routeItem {
+      @include routeMobileSizeMedium;
+    }
+
+    .routeArrow {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  .title {
+    font-size: 52px;
+    line-height: 63px;
+    width: 182px;
+    text-align: left;
+    padding-left: 0;
+    align-self: end;
+  }
+
+  .inputContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .input {
+    height: min-content;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .searchDropDown {
+    padding-top: 3px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 143px;
+    right: 0;
+
+    .searchDropDownList {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    .searchDropDownItem {
+      padding: 9px 0 7.5px 0;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container_size_fixed {
+    max-height: 273px;
+  }
+}

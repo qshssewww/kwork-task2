@@ -1,0 +1,9 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexColumn;
+  gap: 8px;
+  overflow: scroll;
+  max-height: min-content;
+}
+

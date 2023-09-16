@@ -1,0 +1,26 @@
+.container {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.pagination {
+  padding-top: 30px;
+  bottom: -47px;
+  z-index: 0;
+}
+
+.pagination li button {
+  background: #ddd;
+}
+
+.pagination li button[aria-selected=true] {
+  background: #1E293B !important;
+  transform: none;
+}
+
+@media screen and (max-width: 800px) {
+  .pagination {
+    padding-top: 10px;
+    bottom: -27px;
+  }
+}/*# sourceMappingURL=splide-slider.module.css.map */

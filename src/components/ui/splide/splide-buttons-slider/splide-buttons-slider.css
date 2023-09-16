@@ -1,0 +1,82 @@
+/* .container {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  border: 1px solid #222;
+  border-radius: 100%;
+}
+
+.arrowButton .arrowImg {
+  width: 16px;
+  height: 16px;
+}
+
+.arrowButton svg path {
+  fill: transparent;
+}
+
+.arrowButton:hover {
+  background: #495A75;
+  border-color: #495A75;
+}
+
+.arrowButton:hover svg path {
+  stroke: #fff;
+}
+
+.arrowButtonLeft {
+  display: none;
+}
+
+.pagination {
+  z-index: 0;
+  bottom: -47px;
+}
+
+.pagination li button {
+  background: #ddd;
+}
+
+.pagination li button[aria-selected=true] {
+  background: #1E293B !important;
+  transform: none;
+}
+
+.buttonIsActive {
+  background-color: #1E293B;
+  border-color: #1E293B;
+  color: #fff;
+}
+
+.buttonLeft {
+  left: -60px;
+}
+
+.buttonRight {
+  right: -40px;
+}
+
+@media screen and (max-width: 1800px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .splideTrack ul {
+    margin-right: 0 !important;
+  }
+}
+@media screen and (max-width: 870px) {
+  .button {
+    display: none;
+  }
+}# sourceMappingURL=splide-buttons-slider.module.css.map */

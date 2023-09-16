@@ -1,0 +1,123 @@
+@import "@/styles/settings/settings.scss";
+.closeButton {
+  @include resetButtonStyles;
+  margin-left: auto;
+  position: absolute;
+  right: 22px;
+  top: 22px;
+}
+
+
+.container {
+  background: #FFFFFF;
+  border-radius: 5px;
+  width: 606px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city-modal-wrap{
+  display: flex;
+  align-items: stretch;
+  width: 923px;
+  max-width: 100%;
+}
+
+.city-modal-col{
+  &.left-col{
+    width: 237px;
+    background: #1E293B;
+  }
+
+  &.right-col{
+    padding-top: 110px;
+    padding-left: 40px;
+    flex: 1
+  }
+}
+
+.city-modal-location{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 20px;
+}
+
+.loc-icon{
+  margin-right: 14px;
+  width: 32px;
+  height: 36px;
+  flex: none;
+}
+
+.loc-name{
+  font-size: 20px;
+  color: #fff;
+}
+
+.city-modal-country{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 25px;
+  transition: .3s;
+  cursor: pointer;
+
+  &.active, &:hover{
+    background: #fff;
+    color: #333;
+  }
+}
+
+.city-modal-city-wrap{
+  width: 100%;
+  max-width: 550px;
+  margin-right: 20px;
+}
+
+.city-modal-city{
+  width: 50%;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 40px;
+  transition: .3s;
+
+  &:hover{
+    opacity: .5;
+  }
+}
+
+@media(max-width: 575px){
+  .city-modal-wrap{
+    flex-direction: column;
+  }
+
+  .city-modal-col{
+    &.left-col{
+      width: 100%;
+    }
+
+    &.right-col{
+      padding: 20px;
+    }
+  }
+
+  .closeButton path{
+    stroke: #fff;
+  }
+
+  .city-modal-country{
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .city-modal-city{
+    width: 100%;
+  }
+}

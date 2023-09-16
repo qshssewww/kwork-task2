@@ -1,0 +1,121 @@
+@import "@/styles/settings/settings.scss";
+
+.button {
+  @include resetButtonStyles;
+  @include flexCenter;
+  @include cardContentDescriptionMedium;
+  justify-content: center;
+  padding: 14px 20px;
+  min-width: fit-content;
+  height: 58px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+
+  &_weight {
+    &_regular {
+      font-weight: 400;
+    }
+
+    &_medium {
+      font-weight: 500;
+    }
+
+    &_semiBold {
+      font-weight: 600;
+    }
+  }
+
+  &_size {
+    &_medium {
+      padding-top: 10.5px;
+      padding-bottom: 10.5px;
+      height: fit-content;
+      & .icon {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+
+  &_background {
+    &_darkBlue {
+      background-color: $blueFirst;
+      border-color: $blueFirst;
+      &:hover {
+        background: $buttonHover;
+        border-color: $buttonHover;
+      }
+
+      & .icon path {
+        fill: $white;
+      }
+    }
+
+    &_white {
+      background-color: $white;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &_orange {
+      background-color: $mainOrange;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_contentColor {
+    &_darkBlue {
+      color: $blueFirst;
+      border-color: $blueFirst;
+      & .icon path {
+        fill: $blueFirst;
+      }
+    }
+
+    &_white {
+      color: $white;
+      & .icon path {
+        fill: $white;
+      }
+    }
+
+    &_grey {
+      color: $inactiveButtonGrey;
+      border-color: $inactiveButtonGrey;
+      & .icon path {
+        fill: $inactiveButtonGrey;
+      }
+    }
+
+    &_black {
+      color: $black;
+      & .icon path {
+        fill: $black;
+      }
+    }
+  }
+
+  &_border {
+    &_none {
+      border-color: $transparent;
+    }
+  }
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.content {
+  margin: 0;
+  color: inherit;
+}
+
+.spanContent {
+  color: $greyThird;
+}

@@ -1,0 +1,151 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexCenter;
+  position: relative;
+  color: inherit;
+}
+
+.dropdown {
+  color: inherit;
+
+  &_size {
+    &_small {
+      @include dropdownContentSmallRegular;
+    }
+    &_medium {
+      @include dropdownContentMediumRegular;
+    }
+  }
+
+  &_color {
+    &_white {
+      .arrow {
+        stroke: $white;
+        path {
+          stroke: $white;
+        }
+      }
+    }
+    &_darkBlue {
+      stroke: $blueFirst;
+      path {
+        stroke: $blueFirst;
+      }
+    }
+  }
+}
+
+.arrow {
+  padding-left: 3px;
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+}
+
+.titleContainerActive {
+  > .arrow {
+    rotate: 180deg;
+  }
+}
+
+.titleContainers {
+  display: flex;
+  gap: 40px;
+}
+
+.titleContainer {
+  @include flexCenter;
+  width: max-content;
+  gap: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+// .arrow {
+//   padding-left: 3px;
+//   width: 16px;
+//   height: 16px;
+//   transition: all 0.2s ease;
+//   path {
+//     stroke: $blueFirst;
+//   }
+// }
+
+.transparentContainer {
+  padding-top: 9px;
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 22px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.transparentContainerActive {
+  display: flex;
+}
+
+.dropDownListsContainers {
+  display: flex;
+  box-shadow: $shadow;
+  background: $white;
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.title {
+  @include cardContentDescriptionSemiBold;
+  counter-reset: $white;
+}
+
+.dropDownListContainer {
+  @include resetListStyles;
+  box-sizing: border-box;
+  max-width: 180px;
+  width: 180px;
+  color: inherit;
+}
+
+.dropDownListItem {
+  @include flexCenter;
+  max-width: 180px;
+  box-sizing: border-box;
+  gap: 12px;
+  margin: 0 15px;
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid $greyFirst;
+
+  &:hover {
+    background: $greyFirst;
+    border-radius: 5px;
+  }
+}
+
+.dropDownListContainerGrey {
+  background-color: $greyFirst;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+
+  & .dropDownListItem {
+    border-bottom: 1px solid $white;
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+.dropDownListItemTitle {
+  @include cardContentDescriptionSemiBold;
+  padding: 13px 27px 11px 27px;
+  border-bottom: 2px solid $greyFirst;
+  color: $blueFirst;
+}
+
+.listItemContent {
+  @include dropdownContentSmallMedium;
+  color: $blueFirst;
+}

@@ -1,0 +1,34 @@
+@import "@/styles/settings/settings.scss";
+
+.marker {
+  @include flexCenter;
+  justify-content: center;
+  border: 2px solid $white;
+  border-radius: 100%;
+
+  &_color {
+    &_lightBlue {
+      background: $mainBlue;
+    }
+    &_darkBlue {
+      background: $blueFirst;
+    }
+  }
+
+  &_size {
+    &_small {
+      width: 23px;
+      height: 23px;
+    }
+
+    &_big {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.innerText {
+  color: $white;
+  @include font-source(600, 14px, 130%, var(--montserrat));
+}

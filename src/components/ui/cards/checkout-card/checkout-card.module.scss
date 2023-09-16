@@ -1,0 +1,145 @@
+@import "@/styles/settings/settings.scss";
+
+.listItem {
+  @include resetListStyles;
+  max-width: 825px;
+  padding: 9px 13px 8px 8px;
+  background: $greyFirst;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.image {
+  border-radius: 5px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.titleContent {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.cardTitle {
+  @include cardContentSemiBold;
+  color: $black;
+}
+
+.titleContainer {
+  @include flexColumn;
+  gap: 5px;
+}
+
+.priceContainer {
+  @include flexCenter;
+  gap: 8px;
+
+  .price {
+    @include dropdownContentSmallSemiBold;
+    line-height: 20px;
+  }
+
+  & .lastPrice {
+    color: $greyThird;
+    text-decoration: line-through;
+  }
+
+  & .newPrice {
+    color: $black;
+  }
+}
+
+.deleteButton {
+  @include resetButtonStyles;
+  width: 17px;
+  height: 17px;
+}
+.cardInfoList {
+  @include resetListStyles;
+  @include flexCenter;
+  gap: 70px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.cardInfoTitle {
+  @include cardContentRegularMobile;
+  color: $greyThird;
+}
+
+.cardInfoContent {
+  @include attractionsLinksRegular;
+  color: $black;
+}
+
+.peopleList {
+  @include resetListStyles;
+  gap: 70px;
+  padding-top: 14px;
+  display: flex;
+}
+
+.cardInfoItem,
+.peopleListItem {
+  max-width: 204px;
+  width: 100%;
+}
+
+.counter {
+  border: none;
+  justify-content: start;
+  gap: 30px;
+  padding: 0;
+}
+
+.counterTitle {
+  font-weight: 400 !important;
+  color: $black !important;
+}
+
+@media screen and (max-width: 700px) {
+  .listItem {
+    grid-template-columns: 1fr;
+  }
+  .titleContent {
+    justify-content: start;
+  }
+  .titleContainer {
+    padding-left: 6px;
+  }
+  .cardTitle {
+    @include cardContentSemiBoldMobile;
+  }
+  .deleteButton {
+    margin-left: auto;
+  }
+  .image {
+    width: 59px;
+    height: 59px;
+  }
+
+  .peopleList {
+    gap: 20px;
+  }
+
+  .cardInfoList {
+    gap: 33px;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .peopleList {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cardInfoItem,
+  .peopleListItem {
+    max-width: 115px;
+  }
+}

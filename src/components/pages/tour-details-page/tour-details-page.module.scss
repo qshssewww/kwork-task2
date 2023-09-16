@@ -1,0 +1,219 @@
+@import "@/styles/settings/settings.scss";
+
+.page {
+  width: 100%;
+}
+
+.main {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: minmax(500px, 1083px) minmax(300px, 447px);
+  grid-template-areas:
+    "tourShortDescription tourShortDescription"
+    "photosGallery photosGallery"
+    "tourDescription reservationForm"
+    "tourDescription helpLinks"
+    "tourDescription ."
+    "faq ."
+    "reviews ."
+    "cardWithPriceSlider cardWithPriceSlider"
+    "buttons buttons";
+  grid-template-rows: min-content;
+  grid-auto-flow: row;
+  justify-content: center;
+}
+
+.reservationForm {
+  position: sticky;
+  height: fit-content;
+  top: 30px;
+  z-index: 2;
+}
+
+.helpLinks {
+  position: sticky;
+  height: fit-content;
+  top: 404px;
+}
+
+.singlePhotoSlider {
+  display: none;
+}
+
+.tourShortDescription {
+  grid-area: tourShortDescription;
+}
+
+.photosGallery {
+  grid-area: photosGallery;
+}
+
+.reservationForm {
+  grid-area: reservationForm;
+}
+
+.helpLinks {
+  grid-area: helpLinks;
+}
+
+.tourDescription {
+  grid-area: tourDescription;
+}
+
+.cards {
+  grid-area: cards;
+}
+
+.faq {
+  grid-area: faq;
+  padding-top: 24px;
+}
+
+.cardWithPriceSlider {
+  grid-area: cardWithPriceSlider;
+  padding-left: 0 !important;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.reviews {
+  grid-area: reviews;
+  padding-top: 30px;
+}
+
+.buttons {
+  grid-area: buttons;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1600px) {
+  .tourShortDescription,
+  .photosGallery {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .reservationForm,
+  .helpLinks {
+    margin-right: 20px;
+  }
+
+  .helpLinks {
+    top: 421px;
+  }
+
+  .cardWithPriceSlider {
+    padding-top: 20px;
+  }
+
+  .tourDescription,
+  .faq,
+  .cardWithPriceSlider,
+  .buttons,
+  .reviews {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .tourShortDescription,
+  .photosGallery {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .reservationForm,
+  .helpLinks {
+    margin-right: 20px;
+  }
+
+  .helpLinks {
+    top: 421px;
+  }
+
+  .tourDescription,
+  .faq,
+  .buttons,
+  .reviews {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .main {
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "tourShortDescription tourShortDescription"
+      "photosGallery photosGallery"
+      "reservationForm helpLinks"
+      "tourDescription tourDescription"
+      "faq faq"
+      "cardWithPriceSlider cardWithPriceSlider"
+      "reviews reviews"
+      "cards cards"
+      "buttons buttons";
+    padding-top: 12px;
+    border-radius: 23px;
+    margin-top: -23px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 12;
+    background: $white;
+  }
+  .reservationForm,
+  .helpLinks {
+    position: static;
+  }
+  .reservationForm {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    grid-template-areas:
+      "tourShortDescription"
+      "reservationForm"
+      "tourDescription"
+      "helpLinks"
+      "reviews"
+      "faq"
+      "cardWithPriceSlider"
+      // "cards"
+      "buttons";
+    gap: 20px;
+  }
+  .singlePhotoSlider {
+    display: block;
+  }
+  .photosGallery {
+    display: none;
+  }
+  .reservationForm,
+  .helpLinks {
+    margin-left: 20px;
+  }
+  .helpLinks {
+    max-width: 1083px;
+    box-sizing:border-box
+  }
+  .reservationForm {
+    margin-right: 20px;
+  }
+  .reviews {
+    padding-top: 20px;
+  }
+  .faq,
+  .reviews,
+  .tourDescription {
+    padding-right: 20px;
+  }
+  .cardWithPriceSlider {
+    padding-top: 0;
+  }
+}

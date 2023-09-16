@@ -1,0 +1,330 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 924px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.imageContainer{
+    height: 700px;
+    width: 100%;
+    max-width: 924px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image {
+    height: 600px;
+    width: 100%;
+  /* еще больше контроля с max-width */
+    max-width: 924px;
+}
+
+
+
+.slider {
+    padding-top: 45px;
+    padding-bottom: 77px;
+  }
+
+.bread {
+    margin: 0;
+    padding: 0;
+    margin-top: 223px;
+    color: #1E293B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    a {
+        text-decoration: none;
+        color: #1E293B;
+      }
+}
+
+.linkYakorContainer {
+    padding-bottom: 24px;
+    margin-top: 54px;
+    border-radius: 5px;
+    border: 1px solid rgba(34, 34, 34, 0.10);
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    margin-top: 18px;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.date {
+    margin: 0;
+    padding: 0;
+    margin-top: 14px;
+    margin-bottom: 40px;
+    color: var(--neutral-08, #5E5E5E);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.stateName {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    margin-top: 24px;
+    margin-left: 31px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.linkContainer {
+    p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 31px;
+        a {
+            color: #2D9CDB;
+            list-style: none;
+            text-decoration: none;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 37.5px */
+        }
+    }
+}
+
+.heads {
+    h1 {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    h3{
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    img {
+        height: auto;
+        width: 100%;
+  /* еще больше контроля с max-width */
+        max-width: 924px;
+    }
+}
+
+.description {
+    padding-right: 20px;
+    p {
+        margin: 0;
+        padding: 0;
+        color: #000;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        a {
+            color: #000;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            text-decoration-line: underline;
+        }
+    }
+    img {
+        max-width: 924px;
+        max-height: 522px;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .imageContainer{
+        height: 300px;
+    }
+    .bread {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .date {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    
+    .stateName {
+        font-size: 16px;
+    }
+
+    .heads {
+        h1 {
+            margin: 0;
+            padding: 0;
+            margin-top: 40px;
+            color: #000;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+            margin-top: 40px;
+            color: #000;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h3{
+            margin: 0;
+            padding: 0;
+            margin-top: 40px;
+            color: #000;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        img {
+            max-width: 800px;
+        }
+    }
+    .description {
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+    
+            a {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                text-decoration-line: underline;
+            }
+        }
+        img {
+            max-width: 924px;
+            max-height: 522px;
+        }
+    }
+    .linkContainer {
+        p {
+            a {
+                color: #2D9CDB;
+                list-style: none;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 37.5px */
+            }
+        }
+    }
+  }
+
+  .places {
+    margin-top: 80px;
+    background: rgba(34, 34, 34, 0.05);
+    
+}
+
+.placesTitle {
+    margin: 0;
+    padding: 0;
+    padding-top: 77px;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.cardContainer {
+    margin: 0;
+    padding: 0;
+    margin-top: 45px;
+    padding-bottom: 77px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media screen and (max-width: 632px) {
+
+    .cardContainer {
+        margin-top: 30px;
+        img {
+          max-width: 280px;
+          max-height: 187px;
+        }
+      }
+    .title {
+      margin-top: 100px;
+      font-size: 20px;
+    }
+    .bread {
+      font-size: 12px;
+  
+    }
+    .placesTitle {
+        text-align: left;
+        padding-left: 20px;
+      font-size: 20px;
+    }
+  }
+  
+
+  .slider {
+    padding-top: 20px;
+    padding-left: 21px;
+    padding-bottom: 31px;
+}

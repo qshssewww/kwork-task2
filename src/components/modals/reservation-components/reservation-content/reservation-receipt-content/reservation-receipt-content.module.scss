@@ -1,0 +1,104 @@
+@import "@/styles/settings/settings.scss";
+
+.receipt {
+  .receiptPrice {
+    @include subtitleMobile;
+  }
+
+  .receiptPriceContainer {
+    display: none;
+  }
+
+  .receiptItemsList {
+    @include resetListStyles;
+    margin-top: 45px;
+    background: $greyFirst;
+    border-radius: 5px;
+
+    .receiptItem {
+      border-top: 1px solid $greySecond;
+
+      &:first-child {
+        padding: 10px 14px;
+        border-left: 1px solid $greySecond;
+        border-right: 1px solid $greySecond;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      &:nth-child(2) {
+        padding: 10px 14px;
+        border-left: 1px solid $greySecond;
+        border-right: 1px solid $greySecond;
+      }
+
+      &:nth-child(3) {
+        @include flexColumn;
+        gap: 8px;
+        padding: 15px 14px;
+
+        .receiptItemDetailsContainer {
+          @include flexCenter;
+          justify-content: space-between;
+          gap: 8px;
+
+          .receiptItemDetailsContent {
+            @include attractionsLinksMedium;
+            color: $black;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        @include flexCenter;
+        gap: 8px;
+        justify-content: end;
+        padding: 15px 14px;
+      }
+
+      &:nth-last-child(2) {
+        .receiptItemDetailsContainer:last-child {
+          .receiptItemDetailsContent:last-child {
+            color: $mainGreen;
+          }
+        }
+      }
+
+      .receiptItemTitle {
+        @include routeMobileSizeRegular;
+        color: $greyThird;
+      }
+
+      .receiptItemContent {
+        @include cardContentDescriptionMedium;
+        color: $black;
+      }
+    }
+  }
+
+
+}
+
+.span {
+  &_color {
+    &_grey {
+      color: $greyThird;
+    }
+  }
+
+  &_textDecoration {
+    &_lineThrough {
+      text-decoration: line-through;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .receipt {
+    .receiptPriceContainer {
+      @include flexCenter;
+      margin-bottom: 16px;
+      gap: 8px;
+    }
+  }
+}

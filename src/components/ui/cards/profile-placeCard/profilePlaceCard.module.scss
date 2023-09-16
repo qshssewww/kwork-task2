@@ -1,0 +1,135 @@
+@import "../../../../styles/settings/settings.scss";
+
+.container {
+  @include resetListStyles;
+  max-width: 480px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 5px;
+
+}
+
+.contentContainer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.status_new {
+  text-align: center;
+  max-width: 107px;
+  padding: 0px 10px;
+  background: #27AE60;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.statusText {
+  font-style: normal;
+  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+
+.priceContainer {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 30px;
+}
+
+.lastPrice {
+  margin: 0;
+  text-decoration-line: line-through;
+  color: $neutral08;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  text-decoration-line: line-through;
+
+}
+
+.secondPrice {
+  margin: 0;
+  color: $black;
+  font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+/* Shade 02 */
+
+color: #222222;
+}
+
+.priceSpan {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.point {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+
+  color: #717171;
+}
+
+.value {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  color: #222222;
+}
+
+.dateContainer {
+  margin-top: 14px;
+}
+
+.peoplesContainer {
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.cancelButton {
+  @include resetButtonStyles;
+  width: 100%;
+  border: 1px solid #EB5757;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.cancelButtonText {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #EB5757;
+}

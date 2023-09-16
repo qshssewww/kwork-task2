@@ -1,0 +1,103 @@
+@import "@/styles/settings/settings.scss";
+
+.section {
+  max-width: 1560px;
+  padding-left: 20px;
+}
+
+.titleContainer {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.titleSimilar{
+  font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+  cursor: pointer;
+  &:hover {
+    color: $black;
+  }
+}
+
+.view {
+  @include cardContentMedium;
+  position: absolute;
+  top: 15%;
+  width: max-content;
+  cursor: pointer;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.viewCardsContainer {
+  top: -70px;
+  right: 0;
+}
+
+.viewTitleContainer {
+  // display: none;
+  left: calc(100% + 20px);
+  bottom: 12px;
+}
+.card {
+  max-width: 288px;
+}
+
+@media screen and (max-width: 1800px) {
+  .viewCardsContainer {
+    display: none;
+  }
+  .viewTitleContainer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .view {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    margin-bottom: 40px;
+  }
+  .cardsContainer {
+    margin-bottom: 0;
+  }
+
+  .titleContainer {
+    margin: 0 0 20px 0;
+  }
+  .view {
+    @include cardContentRegularMobile;
+    top: 3px;
+    right: 20px;
+    color: $inactiveButtonGrey;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}

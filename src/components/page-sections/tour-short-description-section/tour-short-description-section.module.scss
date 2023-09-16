@@ -1,0 +1,57 @@
+@import "@/styles/settings/settings.scss";
+
+.contentContainer {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ratingInfoContainer {
+  @include flexCenter;
+  gap: 30px;
+}
+
+.ratingInfoContent {
+  @include cardContentRegular;
+  color: $black;
+}
+
+.starRatingContainer {
+  @include flexCenter;
+  gap: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ratingInfoContainer {
+    gap: 14px;
+  }
+  .ratingInfoContent {
+    @include cardContentRegularMobile;
+    color: $black;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ratingInfoContainer {
+    gap: 14px;
+  }
+  .ratingInfoContent {
+    @include cardContentRegularMobile;
+    color: $black;
+  }
+  .title {
+    @include subtitleMobile;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+}

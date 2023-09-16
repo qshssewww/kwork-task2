@@ -1,0 +1,20 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexCenter;
+  max-width: fit-content;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  gap: 18px;
+  border-radius: 5px;
+  background: $blueFirst;
+}
+
+.content {
+  @include dropdownContentSmallSemiBold;
+  color: $white;
+}
+
+.closeButton {
+  @include resetButtonStyles;
+}

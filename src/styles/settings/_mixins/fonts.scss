@@ -1,0 +1,215 @@
+@mixin font-source($weight: false, $size: false, $line-height: false, $font-name: false, $color: false) {
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $font-name {
+    font-family: $font-name, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin title {
+  margin: 0;
+  padding: 0;
+  @include font-source(700, 70px, 85px, var(--montserrat), $white);
+}
+
+@mixin subtitle {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 40px, 49px, var(--montserrat), $black);
+}
+
+@mixin subtitleMobile {
+
+  padding: 0;
+  @include font-source(600, 20px, 24px, var(--montserrat));
+}
+
+@mixin cardContentRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 20px, 24px, var(--montserrat));
+}
+
+@mixin cardContentDescriptionRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 18px, 22px, var(--montserrat), $black);
+}
+
+@mixin cardContentDescriptionMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 18px, 22px, var(--montserrat));
+}
+
+@mixin cardContentDescriptionSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 18px, 22px, var(--montserrat));
+}
+
+@mixin cardContentMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 20px, 24px, var(--montserrat), $inactiveButtonGrey);
+}
+
+@mixin cardContentSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 20px, 24px, var(--montserrat));
+}
+
+@mixin cardContentRegularMobile {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 14px, 17px, var(--montserrat));
+}
+
+@mixin cardContentMediumMobile {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 14px, 17px, var(--montserrat));
+}
+
+@mixin cardContentSemiBoldMobile {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 14px, 17px, var(--montserrat), $black);
+}
+
+@mixin cardContentBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(700, 20px, 24px, var(--montserrat), $black);
+}
+
+@mixin dropdownContentSmallRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 16px, 22px, var(--montserrat));
+}
+
+@mixin dropdownContentSmallMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 16px, 22px, var(--montserrat));
+}
+
+@mixin dropdownContentSmallSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 16px, 22px, var(--montserrat));
+}
+
+@mixin dropdownContentMediumRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 25px, 30px, var(--montserrat));
+}
+
+@mixin dropdownContentMediumMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 25px, 30px, var(--montserrat));
+}
+
+@mixin dropdownContentMediumSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 25px, 30px, var(--montserrat), $white);
+}
+
+@mixin attractionsLinksRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 16px, 20px, var(--montserrat), $inactiveButtonGrey);
+}
+
+@mixin attractionsLinksMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 16px, 20px, var(--montserrat), $inactiveButtonGrey);
+}
+
+@mixin inputPlaceholder {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 18px, 22px, var(--montserrat), $neutral08);
+}
+
+@mixin inputPlaceholderMobile {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 13px, 16px, var(--montserrat), $neutral08);
+}
+
+@mixin lineThroughDecoration {
+  text-decoration-line: line-through;
+  color: $neutral08;
+}
+
+@mixin routeMobileSizeRegular {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 12px, 15px, var(--montserrat));
+}
+
+@mixin routeMobileSizeMedium {
+  margin: 0;
+  padding: 0;
+  @include font-source(500, 12px, 15px, var(--montserrat));
+}
+
+@mixin routeMobileSizeSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 12px, 15px, var(--montserrat));
+}
+
+@mixin datePickerTitle {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 20px, 24px, var(--montserrat));
+}
+
+@mixin datePickerDates {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 22px, 28px, var(--montserrat));
+}
+
+@mixin descriptionTitle {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 30px, 37px, var(--montserrat));
+}
+
+@mixin descriptionContentNormal {
+  margin: 0;
+  padding: 0;
+  @include font-source(400, 25px, 150%, var(--montserrat));
+}
+
+@mixin descriptionContentSemiBold {
+  margin: 0;
+  padding: 0;
+  @include font-source(600, 25px, 150%, var(--montserrat));
+}
+
+@mixin popupTitle {
+  margin: 0;
+  padding: 0;
+ @include font-source(600, 30px, 37px, var(--montserrat));
+}

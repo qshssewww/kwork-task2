@@ -1,0 +1,126 @@
+@import "@/styles/settings/settings.scss";
+
+.section {
+  max-width: 1083px;
+}
+
+.titleContainer {
+  @include flexCenter;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.title {
+  padding-bottom: 0;
+}
+
+.ratingContainer {
+  @include flexCenter;
+  background-image: url(../../../images/logos/icons/background-star.png);
+  background-position: right -76px top 26px;
+  background-size: 260px 260px;
+  background-repeat: no-repeat;
+  gap: 95px;
+  background-color: $greyFirst;
+  padding: 40px 95px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.starsContainer {
+  @include flexColumn;
+  max-width: 286px;
+  gap: 24px;
+  align-items: center;
+}
+
+.overallRating {
+  @include subtitle;
+  color: $black;
+  font-weight: 400;
+}
+
+.progressBarsList {
+  @include resetListStyles;
+  @include flexColumn;
+  gap: 14px;
+}
+
+.progressBarItem {
+  @include flexCenter;
+  max-width: 310px;
+  gap: 30px;
+}
+
+.progressBarItemTitle {
+  @include cardContentDescriptionMedium;
+  color: $black;
+  max-width: 145px;
+  width: 100%;
+}
+
+.progressBarItemBarContainer {
+  @include flexCenter;
+  gap: 12px;
+  width: fit-content;
+}
+
+.progressBarItemRating {
+  margin: 0;
+  @include font-source(500, 14px, 26px, var(--montserrat), $black);
+  color: $mainOrange;
+  width: 22px;
+}
+
+.reviewsList {
+  @include resetListStyles;
+  @include flexColumn;
+  gap: 50px;
+}
+
+.button {
+  margin-top: 50px;
+  width: 200px;
+}
+
+@media screen and (max-width: 900px) {
+  .ratingContainer {
+    gap: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .feedbackButton {
+    @include routeMobileSizeSemiBold;
+    min-width: 100px;
+    padding: 7.5px;
+  }
+  .ratingContainer {
+    flex-direction: column;
+    background-image: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 20px 13px;
+    gap: 20px;
+  }
+  .starsContainer {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .overallRating {
+    @include dropdownContentMediumRegular;
+  }
+  .progressBarItem {
+    gap: 20px;
+  }
+  .progressBarItemTitle {
+    @include cardContentRegularMobile;
+  }
+  .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

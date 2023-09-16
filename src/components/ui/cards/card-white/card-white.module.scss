@@ -1,0 +1,60 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+    max-width: 348px;
+    position: relative;
+    display: flex;
+    padding: 10px 10px 26px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    background: #FFF;
+}
+
+.image {
+    margin: 0;
+    padding: 0;
+    max-width: 348px;
+    min-width: 348px;
+    max-height: 232px;
+    min-height: 232px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    font-family: var(--montserrat);
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.content {
+    text-align: left;
+    font-family: var(--montserrat);
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    color:  #5E5E5E;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 800px) {
+    .image {
+        min-width: 186px;
+        max-height: 121px;
+        min-height: 121px;
+    }
+    .container {  
+        max-width: 206px
+    }
+}

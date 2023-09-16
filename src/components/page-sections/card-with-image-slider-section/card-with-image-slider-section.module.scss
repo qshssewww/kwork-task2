@@ -1,0 +1,58 @@
+@import "@/styles/settings/settings.scss";
+
+.section {
+  max-width: 1560px;
+  margin: 0 auto;  
+}
+
+.card {
+  max-width: 288px;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// .cardsContainer:after {
+//   content: "";
+//   width: calc(100%);
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 5;
+//   background: linear-gradient(270deg, $white 0%, rgba(255, 255, 255, 0) 10%);
+//   pointer-events: none;
+// }
+
+@media screen and (max-width: 800px) {
+  .card {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titlePosition {
+    margin-left: 0;
+  }
+  .section {
+    margin-top: 0;
+  }
+  .cardsContainer {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// @media screen and (max-width: 450px) {
+//   .cardsContainer:after {
+//    left: 5px;
+//     background: linear-gradient(270deg, $white 0%, rgba(255, 255, 255, 0) 30%);
+//   }
+// }

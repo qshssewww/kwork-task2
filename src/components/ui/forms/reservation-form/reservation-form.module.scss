@@ -1,0 +1,51 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  padding: 25px;
+  background: $greyFirst;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.title {
+  @include popupTitle;
+  padding-bottom: 25px;
+}
+
+.span {
+  &_color {
+    &_grey {
+      color: $greyThird;
+    }
+  }
+
+  &_textDecoration {
+    &_lineThrough {
+      text-decoration: line-through;
+    }
+  }
+
+  &_weight {
+    &_regular {
+      font-weight: 400;
+    }
+  }
+}
+
+.form {
+  @include flexColumn;
+  gap: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 16px 13px 20px;
+  }
+  .title {
+    @include subtitleMobile;
+    padding-bottom: 20px;
+  }
+  .button {
+    @include font-source(600, 12px, 15px, var(--montserrat)) ;
+  }
+}

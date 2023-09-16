@@ -1,0 +1,30 @@
+@import "@/styles/settings/settings.scss";
+
+.loader {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 40px auto 0;
+  position: relative;
+  background: $loaderGreen;
+  box-shadow: -24px 0 $loaderGreen, 24px 0 $loaderGreen;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: $loaderGreen;
+    box-shadow: -24px 0 $loaderActiveGreen, 24px 0 $loaderGreen;
+  }
+  66% {
+    background: $loaderActiveGreen;
+    box-shadow: -24px 0 $loaderGreen 24px 0 $loaderGreen;
+  }
+  100% {
+    background: $loaderGreen;
+    box-shadow: -24px 0 $loaderGreen, 24px 0 $loaderActiveGreen;
+  }
+}

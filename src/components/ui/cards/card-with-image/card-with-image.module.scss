@@ -1,0 +1,247 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  @include flexColumn;
+  width: 100%;
+  max-width: 423px;
+  position: relative;
+}
+
+.image {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.image_type_square {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.image_type_cover {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.content {
+  @include flexColumn;
+  padding-top: 14px;
+  gap: 4px;
+}
+
+.title {
+  @include subtitleMobile;
+  margin: 0;
+  color: $black;
+}
+
+.description {
+  @include cardContentDescriptionRegular;
+  color: $neutral08;
+  margin: 0;
+}
+
+.priceContainer {
+  @include cardContentSemiBold;
+  margin-top: 4px;
+  color: $black;
+  display: flex;
+  gap: 4px;
+}
+
+.priceSpan {
+  font-weight: 400;
+}
+
+.lastPrice {
+  margin: 0;
+  text-decoration-line: line-through;
+  color: $neutral08;
+}
+
+.secondPrice {
+  margin: 0;
+  color: $black;
+}
+
+.rating {
+  @include flexCenter;
+  gap: 4px;
+}
+
+.ratingContent {
+  @include cardContentRegularMobile;
+  color: $black;
+}
+
+.likeContainer {
+  position: absolute;
+  padding: 0 8px;
+  box-sizing: border-box;
+  top: 8px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+}
+
+.likeButton {
+  @include resetButtonStyles;
+  background: $transparent;
+}
+
+.likeButton:hover {
+  opacity: 0.5;
+}
+
+.like {
+  width: 30px;
+  height: 30px;
+}
+
+.label {
+  @include cardContentDescriptionSemiBold;
+  @include flexCenter;
+  justify-content: center;
+  padding: 4px 8px;
+  background-color: $white;
+  border-radius: 5px;
+  color: $black;
+}
+
+.label_backgroundColor_white {
+  background: $white;
+}
+
+.label_backgroundColor_green {
+  background: $mainGreen;
+}
+
+.label_backgroundColor_red {
+  background: $mainRed;
+}
+
+.label_textColor_white {
+  color: $white;
+}
+
+.label_textColor_black {
+  color: $black;
+}
+
+.splideSlide {
+  position: relative;
+}
+
+.buttonsContainer {
+  display: none;
+}
+
+.imageContainer {
+  cursor: pointer;
+  &:hover {
+    .buttonsContainer {
+      display: block;
+    }
+  }
+}
+
+.arrowButton {
+  @include flexCenter;
+  background: $white;
+  justify-content: center;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  border-radius: 100%;
+
+  > .arrowImg {
+    width: 12px;
+    height: 12px;
+  }
+
+  & svg path {
+    fill: $white;
+  }
+
+  &:hover {
+    background: $buttonHover;
+    border-color: $buttonHover;
+
+    & svg path {
+      fill: $buttonHover;
+    }
+  }
+
+  &:hover svg path {
+    stroke: $white;
+  }
+}
+
+.pagination {
+  bottom: 8px;
+  z-index: 0;
+
+  & li button {
+    background: $greySecond;
+
+    &[aria-selected="true"] {
+      background: $white !important;
+      transform: none;
+    }
+
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    @include cardContentSemiBoldMobile;
+    color: $black;
+  }
+
+  .description {
+    @include cardContentRegularMobile;
+  }
+  .priceContainer {
+    @include cardContentSemiBoldMobile;
+    padding-top: 4px;
+    color: $black;
+  }
+  .container {
+    @include flexColumn;
+  }
+  .label {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .like {
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  .imageContainer {
+    cursor: pointer;
+    &:hover {
+      .buttonsContainer {
+        display: none;
+      }
+    }
+  }
+  .image_type_square {
+    width: 100%;
+    height: 100%;
+  }
+  .image_type_cover {
+    width: 180px;
+    height: 120px;
+  }
+}
+
+
+.link {
+  text-decoration: none;
+}

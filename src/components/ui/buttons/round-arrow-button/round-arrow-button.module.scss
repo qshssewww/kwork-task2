@@ -1,0 +1,63 @@
+@import "@/styles/settings/settings.scss";
+
+.button {
+  @include flexCenter;
+  @include resetButtonStyles;
+  background: $white;
+  justify-content: center;
+  border-radius: 100%;
+  border: 1px solid $black !important;
+
+  > .arrowImg {
+    width: 16px;
+    height: 16px;
+  }
+
+  & svg path {
+    fill: $white;
+  }
+
+  &:hover {
+    background: $buttonHover !important;
+    border-color: $buttonHover !important;
+
+    & svg path {
+      fill: $buttonHover;
+    }
+  }
+
+  &:hover svg path {
+    stroke: $white;
+  }
+}
+
+.button_direction_left {
+  .arrowImg {
+    rotate: 180deg;
+  }
+}
+
+.button_backgroundColor_transparent {
+  background-color: $transparent;
+}
+
+.button_size_small {
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+}
+
+.button_size_medium {
+  min-width: 42px;
+  max-width: 42px;
+  min-height: 42px;
+  max-height: 42px;
+}
+
+.button_size_big {
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
+}

@@ -1,0 +1,85 @@
+@import "@/styles/settings/settings.scss";
+
+.label {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.inputContainer {
+  width: fit-content;
+  position: relative;
+}
+
+.input {
+  position: absolute;
+  margin: 0;
+  display: block;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.checkMark {
+  display: block;
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: $transparent;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border: 1px solid $checkboxBorder;
+}
+
+.active ~ .checkMark {
+  background-color: $blueFirst;
+  background: $transparent;
+  background-size: contain;
+  background-position: center;
+  transition: background-color 0.2s;
+  border-color: $blueFirst;
+  background: $blueFirst url(../../../../images/logos/icons/check-mark.svg)
+    no-repeat;
+  background-size: 16px;
+  background-position: center;
+}
+
+.contentContainer {
+  @include flexColumn;
+  gap: 4px;
+}
+
+.title {
+  @include cardContentDescriptionRegular;
+  color: $black;
+}
+
+.caption {
+  @include cardContentRegularMobile;
+  color: $greyThird;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    @include attractionsLinksMedium;
+    color: $black;
+    line-height: 20px;
+  }
+  .caption {
+    @include cardContentRegularMobile;
+    color: $greyThird;
+  }
+}

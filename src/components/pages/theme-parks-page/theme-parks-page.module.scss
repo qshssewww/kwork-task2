@@ -1,0 +1,113 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  color: $blueFirst;
+  display: grid;
+  min-height: 100vh;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.title,
+.routePath,
+.destination,
+.catalogue,
+.faq,
+.popular,
+.attractions,
+.guide {
+  box-sizing: content-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.buttons {
+  margin: 0 auto;
+  padding: 80px 20px 0;
+  box-sizing: content-box;
+}
+
+.destination {
+  padding-top: 80px;
+}
+
+.popular {
+  padding-top: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.catalogue {
+  padding-top: 80px;
+}
+
+.faq {
+  margin: 0 auto;
+  padding-top: 88px;
+}
+
+.guide {
+  margin-top: 80px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 800px) {
+  .buttons,
+  .destination,
+  .popular,
+  .guide,
+  .catalogue,
+  .faq {
+    padding-top: 40px;
+  }
+
+  .guide {
+    margin-top: 80px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .buttons,
+  .destination,
+  .popular,
+  .guide,
+  .catalogue,
+  .faq {
+    padding-top: 20px;
+  }
+
+  .guide {
+    margin-top: 20px;
+  }
+
+  .routePath {
+    margin: 0;
+  }
+
+  .title {
+    margin: 0;
+  }
+}

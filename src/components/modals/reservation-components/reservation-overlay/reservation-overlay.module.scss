@@ -1,0 +1,178 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  font-family: var(--montserrat);
+}
+
+.closeButton {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.headerWithPrice {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  @include popupTitle;
+  color: $black;
+  margin: 0;
+}
+
+.closeButton {
+  justify-self: end;
+}
+
+.labelContainer {
+  @include flexCenter;
+  padding-top: 3px;
+  padding-bottom: 45px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.calendarContainer {
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+.footer {
+  @include flexCenter;
+  background: $white;
+  gap: 10px;
+  box-sizing: border-box;
+  padding-top: 40px;
+
+  .button {
+    width: 100%;
+  }
+
+  .squareButton {
+    @include resetButtonStyles;
+    min-width: 46px;
+    min-height: 46px;
+    background-color: $greySecond;
+    border-radius: 5px;
+
+    .arrow {
+      rotate: 180deg;
+      path {
+        stroke: $blueFirst;
+      }
+    }
+  }
+}
+
+.receiptPriceContainer {
+  @include subtitleMobile;
+  @include flexCenter;
+  gap: 8px;
+}
+
+.receiptPrice {
+  @include subtitleMobile;
+}
+
+.receiptButtons {
+  @include flexColumn;
+  padding-top: 96px;
+  gap: 10px;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.span {
+  &_color {
+    &_grey {
+      color: $greyThird;
+    }
+  }
+
+  &_textDecoration {
+    &_lineThrough {
+      text-decoration: line-through;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    position: relative;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    align-items: center;
+    padding: 5px 10px 5px 20px;
+    background: $greyFirst;
+    border-bottom: 1px solid $greySecond;
+
+    .backButton {
+      @include flexCenter;
+      @include resetButtonStyles;
+      gap: 12px;
+
+      .arrow {
+        rotate: 180deg;
+        display: block;
+        width: 16px;
+        height: 16px;
+        path {
+          stroke: $greyThird;
+        }
+      }
+    }
+  }
+
+  .labelContainer {
+    padding: 9px 20px;
+    border-bottom: 1px solid $greySecond;
+  }
+
+  .headerWithPrice {
+    justify-content: center;
+  }
+
+  .receiptPriceContainer {
+    display: none;
+  }
+
+  .headerTitle {
+    @include cardContentSemiBold;
+    justify-self: center;
+  }
+
+  .footer {
+    position: fixed;
+    border-top: 1px solid $greySecond;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background: $white;
+    width: 100%;
+    padding: 23px 20px;
+  }
+
+  .receiptButtons {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .closeButton {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .closeButton {
+    position: static;
+  }
+}

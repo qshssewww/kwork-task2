@@ -1,0 +1,55 @@
+@import "@/styles/settings/settings.scss";
+
+.container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+  max-height: fit-content;
+
+  &_backgroundColor {
+    &_white {
+      background-color: $white;
+    }
+    &_grey {
+      background-color: $greyFirst;
+    }
+  }
+}
+
+.contacts {
+  @include flexCenter;
+  gap: 5px;
+}
+
+.linkContainer {
+  @include flexCenter;
+  @include resetLinkStyles;
+  gap: 4px;
+}
+
+.whatsapp {
+  @include dropdownContentSmallMedium;
+  color: $mainGreen;
+}
+
+.telegram {
+  @include dropdownContentSmallMedium;
+  color: $mainBlue;
+}
+
+.or {
+  @include dropdownContentSmallMedium;
+}
+
+.helpText {
+  @include dropdownContentSmallMedium;
+  color: $blueFirst;
+}
+
+@media screen and (max-width: 800px) {
+  
+  
+}

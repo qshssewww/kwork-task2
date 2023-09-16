@@ -1,0 +1,261 @@
+@import "@/styles/settings/settings.scss";
+
+.footer {
+  @include setSectionMargins;
+  padding: 78px 20px 74px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    #1e293b 0%,
+    #1e293b 56.5%,
+    #172132 56.5%,
+    #172132 100%
+  );
+  position: relative;
+}
+
+.infoSection {
+  @include setSectionContentPosition;
+  display: grid;
+  grid-template-columns: repeat(2, min-content) 1fr;
+  gap: 30px;
+}
+
+.firstContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content 1fr;
+}
+
+.location {
+  @include dropdownContentSmallRegular;
+  min-width: max-content;
+  color: $white;
+}
+
+.logoImg {
+  width: 126.09px;
+  height: 64.06px;
+}
+
+.logoIlnur {
+  max-width: 97.8px;
+  align-self: end;
+}
+
+.impressions {
+  @include dropdownContentSmallRegular;
+  padding-top: 10px;
+  max-width: 120px;
+  color: $white;
+}
+
+.linksSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 65px;
+}
+
+.companyContainer {
+  @include resetListStyles;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  grid-area: company;
+}
+
+.linksContainer {
+  width: 100%;
+
+  &:last-child {
+    padding-top: 44px;
+  }
+}
+
+.titleColumn {
+  @include cardContentDescriptionMedium;
+  padding-bottom: 20px;
+  color: $white;
+}
+
+.textColumn {
+  @include dropdownContentSmallRegular;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.locationContainer {
+  @include flexCenter;
+  gap: 5px;
+  margin-top: 28px;
+}
+
+@media screen and (max-width: 1400px) {
+  .footer {
+    background: linear-gradient(
+      to right,
+      #1e293b 0%,
+      #1e293b 61%,
+      #172132 61%,
+      #172132 100%
+    );
+  }
+  .linksSection {
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .logoImg {
+    width: 100px;
+  }
+  .linksContainer {
+    width: fit-content;
+  }
+}
+
+.mobileIconsContainer {
+  @include flexCenter;
+  gap: 14px;
+}
+
+.mobileIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobileFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mobileLogoContainer {
+  display: flex;
+  align-self: start;
+  gap: 14px;
+}
+
+.mobileButtonsContainer {
+  @include flexCenter;
+  width: 100%;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.dropDownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  border-radius: 5px;
+}
+
+.arrowDown {
+  width: 16px;
+  height: 16px;
+  margin-right: 13px;
+
+  path {
+    stroke: $black;
+  }
+}
+
+.dropDownText {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1e293b;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  margin-left: 14px;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.help {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+.contacts {
+  @include flexCenter;
+  gap: 5px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    background: linear-gradient(
+      to right,
+      #1e293b 0%,
+      #1e293b 56%,
+      #172132 56%,
+      #172132 100%
+    );
+  }
+  .linksSection {
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    background: $blueFirst;
+  }
+
+  .logoIlnur {
+    max-width: 98px;
+    width: 100%;
+  }
+  .titleColumn {
+    @include dropdownContentSmallRegular;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .textColumn {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .logoImg {
+    max-width: 133px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .locationContainer {
+    margin: 0;
+  }
+
+  .logoIlnur {
+    margin-top: 20px;
+    align-self: center;
+  }
+}
